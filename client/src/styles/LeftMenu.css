@@ -1,0 +1,133 @@
+.leftMenu {
+    width: 240px;
+    height: 100%;
+    min-height: 100vh;
+    background: black;
+    backdrop-filter: blur(10px);
+    padding: 25px 30px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.leftMenu .logoContainer {
+    color: #f1f1f1;
+    display: flex;
+    align-items: center;
+}
+
+.leftMenu .logoImage {
+    width: 350px;
+    height: 190px;
+    padding-bottom: 10px;
+    scale:1.2;
+}
+
+.searchBox {
+    width: 100%;
+    height: 45px;
+    position: relative;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.searchBox input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding-left: 45px; /* space for the icon */
+    box-sizing: border-box;
+}
+
+.searchBox .searchIcon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    font-size: 20px;
+}
+
+.MenuContainer {
+    margin: 15px 0;
+}
+
+.MenuContainer .title {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.MenuContainer ul {
+    width: 100%;
+    padding: 0;
+}
+
+.MenuContainer ul li {
+    list-style: none;
+    margin: 5px 0px;
+    width: 100%;
+    padding: 5px 0;
+    position: relative;
+}
+
+.MenuContainer ul li {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.MenuContainer ul li i {
+    font-size: 18px;
+    margin-right: 15px;
+    transition: color 0.3s, box-shadow 0.3s;
+}
+
+.MenuContainer ul li:before {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: -15px;
+    width: 0;
+    height: 5px;
+    background: #49e12e;
+}
+
+.MenuContainer ul li:hover::before,
+.MenuContainer ul li.active::before {
+    width: 100%;
+    transition: 0.3s;
+}
+
+.MenuContainer ul li:hover i,
+.MenuContainer ul li.active {
+    color: lime;
+}
+
+.filteredTracksContainer{
+    background: rgb(10, 14, 21);
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    left:240px;
+    right: 0px;
+    flex-grow: 1;
+    transition: all 0.3s cubic-bezier(0.175, 0.885);
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+  
+.filteredTracks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between the cards */
+    padding: 20px 0; /* Add padding to top and bottom */
+    padding-left: 20px;
+    flex-grow: 1;
+}
+  
+  

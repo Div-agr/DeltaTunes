@@ -1,0 +1,322 @@
+@font-face{
+    font-family: classic;
+    src: url(../assets/text/Freshman.ttf);
+}
+
+@font-face{
+    font-family: notclassic;
+    src: url(../assets/text/Dunkin\ Sans.otf);
+  }
+
+.PlaylistContainer {
+    height: 100vh;
+    flex-grow: 1;
+    background: rgb(10, 14, 21);
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+  
+  .PlaylistContainer h2 {
+    text-align: left;
+    color: #49e12e;
+    font-family: classic;
+    font-size: 32px;
+    font-weight: normal;
+  }
+
+  .PlaylistContainer h3 {
+    text-align: left;
+    color: white;
+    font-family: notclassic;
+    font-size: 24px;
+    font-weight: normal;
+  }
+  
+  .PlaylistGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between the cards */
+    padding: 20px 0; /* Add padding to top and bottom */
+    padding-left: 20px;
+  }
+  
+  .PlaylistCard {
+    display: flex;
+    width:200px;
+    height:230px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #363c5b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .PlaylistCard img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+  
+  .PlaylistCard .title {
+    font-size: 18px;
+    font-family: notclassic;
+    color: #49e12e;
+    filter: drop-shadow(0px 0px 4px #49e12e); 
+    margin: 5px 0;
+  }
+  
+  .PlaylistCard .type {
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+  }
+
+  .PlaylistCard:hover{
+    scale:1.1;
+    transition:0.3s ease;
+  }
+  
+  .CreateCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    color: #007bff;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .CreateCard:hover {
+    color: #0056b3;
+  }
+  
+  input[type="file"] {
+    display: none;
+  }
+  
+  label[for="image-upload"] {
+    cursor: pointer;
+    font-family: notclassic;
+    font-size:20px;
+    color: aqua;
+    text-decoration: underline;
+  }
+  
+  .Modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  .ModalContent {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.307));
+    backdrop-filter: blur(10px);
+    border: 1px solid #49e12e;
+    overflow-y:scroll;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    height:100%;
+    text-align: center;
+  }
+  
+  .ModalContent h3 {
+    color: #49e12e;
+    font-size: 32px;
+    font-family: classic;
+    font-weight: bold;
+  }
+  
+  .ModalContent input[type="text"]{
+    font-family: notclassic;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    width: 40%;
+    height: 50px;
+    border-radius: 20px;
+    border: 3px #49e12e solid;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.307));
+    backdrop-filter: blur(10px);
+    margin-bottom:10px;
+    margin-top: 10px;
+  }
+  
+  .checktext{
+    font-size:25px;
+    font-weight: bold;
+    color:#49e12e;
+    filter: drop-shadow(0px 0px 4px #49e12e);
+  }
+
+  .ModalContent input[type="checkbox"]{
+    border-radius: 5px;
+    border: 3px #49e12e;
+    color:#49e12e;
+    margin-bottom: 10px;
+  }
+
+  .ModalContent button {
+    margin-top: 20px;
+    margin-right:20px;
+    font-family: notclassic;
+    font-size: 20px;
+    text-align: center;
+    width: 40%;
+    height: 50px;
+    color:white;
+    border-radius: 20px;
+    border: 3px #49e12e solid;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.307));
+    backdrop-filter: blur(10px);
+  }
+
+  .ModalContent button:hover{
+    scale:1.1;
+    transition:0.1s ease;
+  }
+  
+  .SongSelection {
+    display:flex;
+    flex-wrap: wrap;
+    margin-top:15px;
+  }
+  
+  .SongItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+  
+  .add {
+    color: #49e12e;
+    filter: drop-shadow(0px 0px 4px #49e12e);
+    font-weight: bold;
+    font-size:20px;
+    letter-spacing: 1px;
+    margin-top:10px; 
+    cursor: pointer;
+    bottom:0;
+  }
+  
+  .add:hover {
+    color: aqua;
+    filter: drop-shadow(0px 0px 4px aqua);
+  }
+
+  .MusicPlayerContainer {
+    width: 100%;
+    flex-grow: 1;
+    margin-top:1%;
+    height: 120px;
+    padding: 10px;
+    display: flex;
+    background-color: #000;
+  }
+
+  /* Playlist.css */
+.PlaylistDetails {
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+.SongsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between the cards */
+    padding: 20px 0; /* Add padding to top and bottom */
+    padding-left: 20px;
+}
+
+.SongCard {
+    position: relative; /* Add this line to make sure the absolute positioning works */
+    background-color: ghostwhite;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 200px; /* Adjust the width based on your preference */
+    text-align: center;
+    padding-bottom: 10px; /* Add padding to ensure content is contained within the card */
+}
+
+.SongCard img {
+    width: 100%;
+    height: 150px; /* Adjust the height based on your preference */
+    object-fit: cover;
+    border-bottom: 1px solid #ddd; /* Add a bottom border to separate the image */
+}
+
+.SongCard .details {
+  margin-top: 10px;
+}
+
+.SongCard .details .name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+.SongCard .details .artist {
+  font-size: 16px;
+  color: gray;
+  margin-bottom: 10px; /* Ensure there's space below the artist name */
+  display: block; /* Ensure the artist name is always displayed */
+}
+
+.SongCard .favourite {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #bbb;
+  transition: color 0.3s ease;
+}
+
+.SongCard .favourite.filled {
+  color: #49e12e;
+  filter: drop-shadow(0px 0px 4px #49e12e);
+}
+
+.SongCard:hover {
+  transform: scale(1.1); /* Corrected from scale to transform */
+  transition: 0.3s ease;
+}
+
+.combine{
+  margin-left: 20px;;
+    margin-top: 20px;
+    margin-right:20px;
+    font-family: notclassic;
+    font-size: 20px;
+    text-align: center;
+    width: 30%;
+    height: 50px;
+    color:white;
+    border-radius: 20px;
+    border: 3px #49e12e solid;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.307));
+    backdrop-filter: blur(10px);
+}
+
+.combine:hover{
+  scale:1.1;
+  transition:0.1s ease;
+}
+  

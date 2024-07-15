@@ -1,0 +1,6 @@
+export {default as LoginBG} from "./images/greenwave.jpg"
+export {default as logo} from "./images/logo.png"
+export {default as singer } from "./images/artist.jpg"
+export {default as cheques} from "./audio/cheques.mp3"
+export {default as checkitout} from "./audio/checkitout.mp3"
+export {default as artist} from "./images/singer.jpg"

@@ -1,0 +1,82 @@
+@font-face{
+    font-family: classic;
+    src: url(../assets/text/Freshman.ttf);
+}
+
+@font-face{
+    font-family: notclassic;
+    src: url(../assets/text/Dunkin\ Sans.otf);
+}
+
+.container {
+    width: 50%;
+    margin-left:350px;
+    margin-right:325px;
+    height:90%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.307));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    justify-content: center;
+    padding: 15px;
+}
+
+.sub-container {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+}
+
+.log {
+    width: 40%;
+    height: 60px;
+    font-size:24px;
+    border-radius: 20px;
+    border: 3px #49e12e solid;
+    min-width: 250px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.307));
+    backdrop-filter: blur(10px);
+    margin-left:30%;
+  }
+  
+.log:hover {
+    scale:1.1;
+    color:#49e12e;
+    transition: 0.1s ease;
+}
+
+.text{
+    font-family: classic;
+    font-size: 48px;
+    color: white;
+    text-align: center;
+    margin-bottom: 5px;
+
+}
+
+.desc{
+    font-family: notclassic;
+    font-size: 20px;
+    margin-top: 5%;
+    padding:10px;
+    color: white;
+    text-align: center;
+}
+
+.sub-container input{
+    font-family: notclassic;
+    text-align: center;
+    color: white;
+    width: 60%;
+    height: 50px;
+    border-radius: 20px;
+    border: 3px #49e12e solid;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.307));
+    backdrop-filter: blur(10px);
+}

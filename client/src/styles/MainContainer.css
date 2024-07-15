@@ -1,0 +1,222 @@
+@font-face{
+  font-family: classic;
+  src: url(../assets/text/Freshman.ttf);
+}
+
+@font-face{
+  font-family: notclassic;
+  src: url(../assets/text/Dunkin\ Sans.otf);
+}
+
+.mainContainer{
+  background: rgb(10, 14, 21);
+  height: 85vh;
+  position: relative;
+  right: 0px;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  transition: all 0.3s cubic-bezier(0.175, 0.885);
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    height: 75px;
+    padding: 30px;
+    column-gap: 50px;
+  }
+  
+  .navbar span {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .navbar span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -20px; /* Adjust this value based on your design preference */
+    width: 100%;
+    height: 3px; /* Thickness of the underline */
+    background-color: lime;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .navbar span:hover::after,
+  .navbar span.active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  .banner {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust the height based on your preference */
+  }
+  
+  .bannerImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+  
+  .bannerText {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 48px; /* Adjust the size based on your preference */
+    font-weight: bold;
+    font-family: classic
+  }
+  
+  .artistName {
+    position: absolute;
+    bottom: 80px;
+    right: 20px;
+    color: white;
+    font-size: 24px; /* Adjust the size based on your preference */
+    font-weight: bold;
+  }
+  
+  .playButton {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: lime;
+    color: black;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .playButton:hover {
+    background-color: lightgray;
+  }
+  
+  .stats {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 18px; /* Adjust the size based on your preference */
+  }
+  
+  .stats div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; /* Add some space between the counts */
+  }
+  
+  .stats .icon {
+    color: lime;
+    margin-right: 10px; /* Add some space between the icon and the text */
+  }
+
+.songCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between the cards */
+    padding: 20px 0; /* Add padding to top and bottom */
+    padding-left: 20px;
+  }
+  
+  /* Styling for individual song cards */
+  .songCard {
+    position: relative; /* Add this line to make sure the absolute positioning works */
+    background-color: ghostwhite;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 200px; /* Adjust the width based on your preference */
+    text-align: center;
+    padding-bottom: 10px; /* Add padding to ensure content is contained within the card */
+  }
+  
+  .songCard .favourite {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #bbb;
+    transition: color 0.3s ease;
+  }
+  
+  .songCard .favourite.filled {
+    color: #49e12e;
+    filter: drop-shadow(0px 0px 4px #49e12e);
+  }
+  
+  .songCard img {
+    width: 100%;
+    height: 150px; /* Adjust the height based on your preference */
+    object-fit: cover;
+    border-bottom: 1px solid #ddd; /* Add a bottom border to separate the image */
+  }
+  
+  .songCard .songName {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+  }
+  
+  .songCard .ArtistName {
+    font-size: 16px;
+    color: gray;
+    margin-bottom: 10px; /* Ensure there's space below the artist name */
+    display: block; /* Ensure the artist name is always displayed */
+  }
+
+  .playButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 25px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .playButton i {
+    color: #49e12e;
+    filter: drop-shadow(0px 0px 4px #49e12e);
+    font-size: 20px;
+  }
+
+  .songCard:hover .playButton {
+    opacity: 1;
+  }
+  
+  .songCard:hover {
+    transform: scale(1.1); /* Corrected from scale to transform */
+    transition: 0.3s ease;
+  }
+  
+  /* Styling for category headings */
+  .list {
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    padding-left: 20px;
+  }
